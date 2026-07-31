@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AM Rent Studio | Iznajmljivanje svečanih haljina Podgorica</title>
+<meta name="description" content="AM Rent Studio – butik za iznajmljivanje svečanih haljina u centru Podgorice. Vjenčanja, mature, gala večeri. Hemijsko čišćenje uključeno.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F3EBE0;
+    --card:#FBF7F0;
+    --ink:#2A211A;
+    --ink-soft:#6b5d4f;
+    --gold:#B8935A;
+    --gold-deep:#9c7940;
+    --line:rgba(184,147,90,0.3);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    line-height:1.5;
+  }
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:520px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(243,235,224,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 20px;
+    max-width:520px;margin:0 auto;
+  }
+  .logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold-deep);}
+  .nav-cta{
+    background:var(--gold);color:#fff;
+    padding:9px 16px;
+    font-size:0.75rem;letter-spacing:0.04em;
+    border-radius:100px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:36px 0 8px;text-align:center;}
+  .eyebrow{
+    font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--gold-deep);margin-bottom:10px;
+  }
+  .hero h1{
+    font-size:2.1rem;line-height:1.15;
+    margin-bottom:14px;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold-deep);}
+  .hero p{
+    color:var(--ink-soft);
+    font-size:0.98rem;
+    margin-bottom:26px;
+    padding:0 6px;
+  }
+  .btn-row{display:flex;gap:10px;flex-direction:column;}
+  .btn-primary{
+    background:var(--gold);color:#fff;
+    padding:15px;border-radius:100px;
+    font-size:0.9rem;letter-spacing:0.02em;
+    text-align:center;
+    box-shadow:0 8px 20px -8px rgba(184,147,90,0.5);
+  }
+  .btn-ghost{
+    border:1.5px solid var(--gold);
+    color:var(--gold-deep);
+    padding:15px;border-radius:100px;
+    font-size:0.9rem;
+    text-align:center;
+  }
+
+  /* ---------- SECTION ---------- */
+  .section{padding:52px 0;}
+  .section-head{text-align:center;margin-bottom:28px;}
+  .section-head h2{font-size:1.7rem;margin-bottom:8px;}
+  .section-head p{color:var(--ink-soft);font-size:0.92rem;}
+
+  /* ---------- WHY US ---------- */
+  .why-list{display:flex;flex-direction:column;gap:14px;}
+  .why-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:20px;
+    display:flex;gap:16px;align-items:flex-start;
+  }
+  .why-icon{
+    width:42px;height:42px;flex-shrink:0;
+    background:rgba(184,147,90,0.12);
+    border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    color:var(--gold-deep);font-size:1.3rem;
+  }
+  .why-card h3{font-size:1.15rem;margin-bottom:4px;font-weight:500;}
+  .why-card p{font-size:0.88rem;color:var(--ink-soft);line-height:1.55;}
+
+  /* ---------- COLLECTION / SIZE GROUPS ---------- */
+  .size-group{margin-bottom:36px;}
+  .size-group-head{
+    display:flex;align-items:baseline;gap:10px;
+    margin-bottom:14px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:8px;
+  }
+  .size-group-head h3{
+    font-size:1.3rem;color:var(--gold-deep);
+  }
+  .size-group-head span{
+    font-size:0.78rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.04em;
+  }
+  .dress-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  }
+  .dress-card{
+    background:var(--card);
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .dress-img{aspect-ratio:3/4;background:#eee;position:relative;}
+  .dress-img img{width:100%;height:100%;object-fit:cover;}
+  .dress-img .thumbs{
+    position:absolute;bottom:8px;left:8px;right:8px;
+    display:flex;gap:6px;
+  }
+  .dress-img .thumbs button{
+    flex:1;height:4px;border:none;border-radius:2px;
+    background:rgba(255,255,255,0.55);padding:0;cursor:pointer;
+  }
+  .dress-img .thumbs button.active{background:#fff;}
+  .dress-info{padding:12px 14px 15px;}
+  .dress-name{font-size:0.85rem;color:var(--ink);margin-bottom:2px;}
+  .dress-price{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold-deep);margin-top:2px;}
+  .collection-cta{text-align:center;margin-top:24px;}
+  .collection-cta a{
+    display:inline-block;
+    font-size:0.88rem;
+    color:var(--gold-deep);
+    border-bottom:1px solid var(--gold-deep);
+    padding-bottom:2px;
+  }
+  .size-filters{
+    display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
+    margin-bottom:26px;
+  }
+  .size-filters button{
+    border:1.5px solid var(--gold);
+    background:transparent;color:var(--gold-deep);
+    padding:8px 18px;border-radius:100px;
+    font-family:'Jost',sans-serif;font-size:0.82rem;letter-spacing:0.02em;
+    cursor:pointer;
+  }
+  .size-filters button.active{
+    background:var(--gold);color:#fff;
+  }
+  .btn-cta-big{
+    display:inline-block;
+    background:linear-gradient(135deg, var(--gold), var(--gold-deep));
+    color:#000;
+    padding:18px 34px;
+    border-radius:100px;
+    font-size:1rem;
+    font-weight:500;
+    letter-spacing:0.02em;
+    box-shadow:0 10px 28px -8px rgba(184,147,90,0.65);
+    border:none;
+    cursor:pointer;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-cta-big:hover{
+    transform:translateY(-2px);
+    box-shadow:0 14px 32px -8px rgba(184,147,90,0.75);
+  }
+
+  /* ---------- PROCESS ---------- */
+  .process-list{display:flex;flex-direction:column;gap:0;}
+  .process-item{
+    display:flex;gap:16px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .process-item:last-child{border-bottom:none;}
+  .process-num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.5rem;color:var(--gold);
+    width:32px;flex-shrink:0;
+  }
+  .process-item h3{font-size:1.02rem;margin-bottom:4px;font-weight:500;}
+  .process-item p{font-size:0.86rem;color:var(--ink-soft);line-height:1.55;}
+
+  /* ---------- FAQ ---------- */
+  details{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px 18px;
+    margin-bottom:10px;
+  }
+  summary{
+    font-size:0.95rem;font-weight:500;
+    cursor:pointer;
+    list-style:none;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-size:1.3rem;color:var(--gold-deep);}
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px;font-size:0.88rem;color:var(--ink-soft);line-height:1.6;}
+
+  /* ---------- ABOUT ---------- */
+  .about-text p{color:var(--ink-soft);font-size:0.95rem;line-height:1.7;margin-bottom:14px;}
+  .about-text p.quote{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    color:var(--gold-deep);font-size:1.2rem;line-height:1.5;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:24px 20px;
+  }
+  .contact-row{
+    display:flex;gap:14px;align-items:center;
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .contact-row:last-of-type{border-bottom:none;}
+  .contact-icon{
+    width:38px;height:38px;flex-shrink:0;
+    background:rgba(184,147,90,0.12);
+    border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.05rem;
+  }
+  .contact-label{font-size:0.7rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.04em;}
+  .contact-value{font-size:0.95rem;}
+  .social-btn{
+    margin-top:18px;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--gold);color:#fff;
+    padding:15px;border-radius:100px;
+    font-size:0.9rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    text-align:center;
+    padding:36px 20px 40px;
+  }
+  footer p{font-size:0.78rem;color:var(--ink-soft);margin-top:4px;}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease, transform .5s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  .dress-img{cursor:pointer;}
+
+  .lightbox{
+    position:fixed;inset:0;z-index:1000;
+    background:rgba(20,15,10,0.94);
+    display:none;
+    align-items:center;justify-content:center;
+    padding:20px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox-content{
+    position:relative;
+    max-width:100%;max-height:100%;
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .lightbox-content img{
+    max-width:100%;max-height:70vh;
+    border-radius:10px;
+    object-fit:contain;
+    background:#111;
+  }
+  .lightbox-caption{
+    color:#fff;text-align:center;margin-top:14px;
+    font-size:0.9rem;
+  }
+  .lightbox-caption .lb-price{
+    font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.2rem;margin-left:8px;
+  }
+  .lightbox-close{
+    position:absolute;top:-6px;right:-6px;
+    background:rgba(255,255,255,0.12);color:#fff;
+    border:none;border-radius:50%;
+    width:38px;height:38px;font-size:1.2rem;
+    cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .lightbox-nav{
+    position:fixed;top:50%;transform:translateY(-50%);
+    background:rgba(255,255,255,0.12);color:#fff;
+    border:none;border-radius:50%;
+    width:46px;height:46px;font-size:1.4rem;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+  }
+  .lightbox-prev{left:14px;}
+  .lightbox-next{right:14px;}
+  .lightbox-counter{
+    color:rgba(255,255,255,0.6);font-size:0.78rem;margin-top:8px;
+  }
+  @media (max-width:480px){
+    .lightbox-nav{width:40px;height:40px;font-size:1.2rem;}
+    .lightbox-prev{left:6px;}
+    .lightbox-next{right:6px;}
+  }
+
+  @media (min-width:600px){
+    .wrap{max-width:600px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="logo">AM Rent Studio</a>
+    <a href="#kontakt" class="nav-cta">Rezervišite</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" id="top">
+    <div class="eyebrow">Podgorica · Kralja Nikole 128</div>
+    <h1>Zablistajte <em>bez</em> potrebe za kupovinom</h1>
+    <p>Butik za iznajmljivanje svečanih haljina u centru Podgorice. Vjenčanja, mature i gala večeri — hemijsko čišćenje uključeno u cijenu.</p>
+    <div class="btn-row">
+      <a href="#kolekcija" class="btn-primary">Pogledajte kolekciju</a>
+      <a href="#kontakt" class="btn-ghost">Zakažite probu</a>
+    </div>
+  </section>
+
+  <section class="section" id="zasto-mi">
+    <div class="section-head reveal">
+      <h2>Zašto baš mi</h2>
+      <p>Pet razloga da nam se prepustite</p>
+    </div>
+    <div class="why-list reveal">
+      <div class="why-card">
+        <div class="why-icon">01</div>
+        <div><h3>Širok izbor</h3><p>Haljine za vjenčanja, mature i gala večeri — najnoviji trendovi u različitim bojama i veličinama.</p></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">02</div>
+        <div><h3>Kvalitet</h3><p>Svaka haljina se pažljivo održava uz redovno profesionalno čišćenje.</p></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">03</div>
+        <div><h3>Povoljne cijene</h3><p>Luksuzan doživljaj po pristupačnim cijenama, bez kompromisa u kvalitetu.</p></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">04</div>
+        <div><h3>Unikatni komadi</h3><p>Haljine koje se ne mogu naći nigdje drugo.</p></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">05</div>
+        <div><h3>Stručni savjet</h3><p>Pomažemo da pronađete haljinu koja savršeno odgovara vašem stilu.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kolekcija">
+    <div class="section-head reveal">
+      <h2>Kolekcija</h2>
+      <p>Nekoliko modela iz naše ponude</p>
+    </div>
+    <div id="preview-grid" class="dress-grid reveal"></div>
+    <div class="btn-row reveal" style="margin-top:22px;">
+      <a href="#cijela-ponuda" id="full-offer-btn" class="btn-primary">Pogledajte cijelu ponudu →</a>
+    </div>
+  </section>
+
+  <section class="section" id="cijela-ponuda" style="display:none;">
+    <div class="section-head reveal">
+      <h2>Cijela ponuda</h2>
+      <p>Filtrirajte haljine po veličini</p>
+    </div>
+    <div id="size-filters" class="size-filters reveal"></div>
+    <div id="size-groups" class="reveal"></div>
+    <p class="no-results" id="no-dresses" style="display:none;text-align:center;color:var(--ink-soft);font-size:0.9rem;padding:30px 0;">Kolekcija se ažurira — uskoro nove haljine.</p>
+    <div class="collection-cta reveal">
+      <a href="#kontakt">Ne vidite pravi model? Pitajte nas →</a>
+    </div>
+  </section>
+
+  <section class="section" id="proces">
+    <div class="section-head reveal">
+      <h2>Kako funkcioniše</h2>
+      <p>Put do savršene haljine</p>
+    </div>
+    <div class="process-list reveal">
+      <div class="process-item">
+        <div class="process-num">01</div>
+        <div><h3>Odaberite haljinu</h3><p>Pogledajte kolekciju na sajtu ili Instagramu za najnovije modele.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">02</div>
+        <div><h3>Kontaktirajte nas</h3><p>Rezervišite termin za probu putem Vibera ili Instagrama.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">03</div>
+        <div><h3>Dođite na probu</h3><p>Kralja Nikole 128, Podgorica. Odaberite haljinu u prijatnom ambijentu.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">04</div>
+        <div><h3>Zablistajte</h3><p>Uživajte u svom posebnom danu u haljini iz AM Rent Studija.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="section-head reveal">
+      <h2>Pitanja</h2>
+      <p>Često postavljena pitanja</p>
+    </div>
+    <div class="reveal">
+      <details>
+        <summary>Da li se plaća hemijsko čišćenje?</summary>
+        <p>Ne. Hemijsko čišćenje i peglanje su uključeni u cijenu iznajmljivanja. Svaka haljina je spremna za nošenje.</p>
+      </details>
+      <details>
+        <summary>Koliko unaprijed treba rezervisati termin?</summary>
+        <p>Preporučujemo 2 do 4 nedjelje prije događaja, posebno za mature i vjenčanja.</p>
+      </details>
+      <details>
+        <summary>Što ako se haljina ošteti?</summary>
+        <p>Manja oštećenja i fleke rješava naš standardni servis. Veća oštećenja se procjenjuju posebno.</p>
+      </details>
+      <details>
+        <summary>Nudite li dostavu van Podgorice?</summary>
+        <p>Da, usluge su dostupne širom Crne Gore uz dogovor oko dostave.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="o-nama">
+    <div class="section-head reveal">
+      <h2>O nama</h2>
+    </div>
+    <div class="about-text reveal">
+      <p>U AM Rent Studio-u posvećeni smo tome da vam pružimo nezaboravno iskustvo iznajmljivanja haljina — želja nam je da svako pronađe savršenu haljinu za posebne prilike, bez obzira na budžet.</p>
+      <p>Vjerujemo da svaka žena zaslužuje da se osjeća prelijepo i samouvjereno, bez pritiska vlasništva.</p>
+      <p class="quote">Ne iznajmljujete samo haljinu — postajete dio zajednice koja slavi individualnost i ljepotu svake žene.</p>
+    </div>
+  </section>
+
+  <section class="section" id="kontakt">
+    <div class="section-head reveal">
+      <h2>Kontakt</h2>
+      <p>Zakažite svoju probu</p>
+    </div>
+    <div class="contact-card reveal">
+      <div class="contact-row">
+        <div class="contact-icon">📍</div>
+        <div><div class="contact-label">Adresa</div><div class="contact-value">Kralja Nikole 128, Podgorica</div></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">📞</div>
+        <div><div class="contact-label">Telefon</div><div class="contact-value"><a href="tel:+38267853433">+382 67 853 433</a></div></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">✉️</div>
+        <div><div class="contact-label">E-mail</div><div class="contact-value"><a href="mailto:amrentstudio@gmail.com">amrentstudio@gmail.com</a></div></div>
+      </div>
+      <a href="https://www.instagram.com/am_rentstudio/" target="_blank" class="social-btn">Pratite nas na Instagramu</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>Kralja Nikole 128, Podgorica, Crna Gora</p>
+  <p style="opacity:0.6;margin-top:8px;">&copy; 2026 AM Rent Studio</p>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Prethodna slika">‹</button>
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lb-close" aria-label="Zatvori">✕</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lightbox-caption" id="lb-caption"></div>
+    <div class="lightbox-counter" id="lb-counter"></div>
+  </div>
+  <button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Sljedeća slika">›</button>
+</div>
+
+<script>
+  const sizeGroups = [
+    {
+      size: "XS",
+      dresses: [
+        { name: "Braon, ASB", price: 70, imgs: ["images/XS/braon-asb-1.jpg", "images/XS/braon-asb-2.jpg", "images/XS/braon-asb-3.jpg", "images/XS/braon-asb-4.jpg"] },
+        { name: "Žuta, sa šalom", price: 70, imgs: ["images/XS/zuta-sa-salom-1.jpg", "images/XS/zuta-sa-salom-2.jpg"] },
+        { name: "Crna, Marta haljina", price: 70, imgs: ["images/XS/crna-marta-haljina-1.jpg", "images/XS/crna-marta-haljina-2.jpg", "images/XS/crna-marta-haljina-3.jpg"] },
+        { name: "Crna, kratka naramenice", price: 70, imgs: ["images/XS/crna-kratka-naramenice-1.jpg", "images/XS/crna-kratka-naramenice-2.jpg"] },
+        { name: "Crvena, MIK ruža", price: 70, imgs: ["images/XS/crvena-mik-ruza-1.jpg", "images/XS/crvena-mik-ruza-2.jpg"] },
+      ]
+    },
+  ];
+
+  // Flatten all dresses with their size attached
+  const allDresses = sizeGroups.flatMap(group =>
+    group.dresses.map(d => ({ ...d, size: group.size }))
+  );
+
+  // Flat list of every image in the whole offer, in order, for lightbox navigation
+  const lightboxImages = [];
+  const globalStart = new Map();
+  allDresses.forEach(d => {
+    globalStart.set(d, lightboxImages.length);
+    d.imgs.forEach(src => lightboxImages.push({ src, name: d.name, size: d.size, price: d.price }));
+  });
+
+  function createDressCard(d) {
+    const card = document.createElement('div');
+    card.className = 'dress-card';
+
+    const thumbsHtml = d.imgs.length > 1
+      ? `<div class="thumbs">${d.imgs.map((_, i) => `<button class="${i === 0 ? 'active' : ''}" data-i="${i}"></button>`).join('')}</div>`
+      : '';
+
+    card.innerHTML = `
+      <div class="dress-img">
+        <img src="${d.imgs[0]}" loading="lazy" alt="${d.name}, veličina ${d.size}" width="400" height="533">
+        ${thumbsHtml}
+      </div>
+      <div class="dress-info">
+        <div class="dress-name">${d.name} <span style="color:var(--ink-soft);font-size:0.78rem;">· ${d.size}</span></div>
+        <div class="dress-price">${d.price}€</div>
+      </div>
+    `;
+
+    let currentIdx = 0;
+    const imgEl = card.querySelector('.dress-img img');
+
+    if (d.imgs.length > 1) {
+      const buttons = card.querySelectorAll('.thumbs button');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          currentIdx = parseInt(btn.dataset.i, 10);
+          imgEl.src = d.imgs[currentIdx];
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+    }
+
+    imgEl.addEventListener('click', () => {
+      openLightbox(globalStart.get(d) + currentIdx);
+    });
+
+    return card;
+  }
+
+  // ---- Homepage preview (4 dresses) ----
+  const previewGrid = document.getElementById('preview-grid');
+  const previewNames = ['Braon, ASB', 'Žuta, sa šalom', 'Crna, Marta haljina', 'Crvena, MIK ruža'];
+  const previewDresses = previewNames
+    .map(name => allDresses.find(d => d.name === name))
+    .filter(Boolean);
+  (previewDresses.length ? previewDresses : allDresses.slice(0, 4))
+    .forEach(d => previewGrid.appendChild(createDressCard(d)));
+
+  // ---- Full offer with size filter ----
+  const container = document.getElementById('size-groups');
+  const noResults = document.getElementById('no-dresses');
+  const filtersEl = document.getElementById('size-filters');
+
+  if (allDresses.length === 0) {
+    noResults.style.display = 'block';
+  }
+
+  const sizesPresent = [...new Set(sizeGroups.map(g => g.size))];
+  let activeFilter = 'Sve';
+
+  function renderFullGrid() {
+    container.innerHTML = '';
+    const grid = document.createElement('div');
+    grid.className = 'dress-grid';
+    const dressesToShow = activeFilter === 'Sve'
+      ? allDresses
+      : allDresses.filter(d => d.size === activeFilter);
+    dressesToShow.forEach(d => grid.appendChild(createDressCard(d)));
+    container.appendChild(grid);
+  }
+
+  function renderFilters() {
+    filtersEl.innerHTML = '';
+    ['Sve', ...sizesPresent].forEach(size => {
+      const btn = document.createElement('button');
+      btn.textContent = size === 'Sve' ? 'Sve' : `Veličina ${size}`;
+      if (size === activeFilter) btn.classList.add('active');
+      btn.addEventListener('click', () => {
+        activeFilter = size;
+        filtersEl.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderFullGrid();
+      });
+      filtersEl.appendChild(btn);
+    });
+  }
+
+  renderFilters();
+  renderFullGrid();
+
+  // Reveal "Cijela ponuda" only when the button is clicked
+  const fullOfferBtn = document.getElementById('full-offer-btn');
+  const fullOfferSection = document.getElementById('cijela-ponuda');
+  fullOfferBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    fullOfferSection.style.display = 'block';
+    fullOfferSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    fullOfferSection.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  });
+
+  // ---- Lightbox ----
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbCaption = document.getElementById('lb-caption');
+  const lbCounter = document.getElementById('lb-counter');
+  let lbIndex = 0;
+
+  function showLightboxImage(i) {
+    lbIndex = (i + lightboxImages.length) % lightboxImages.length;
+    const item = lightboxImages[lbIndex];
+    lbImg.src = item.src;
+    lbImg.alt = `${item.name}, veličina ${item.size}`;
+    lbCaption.innerHTML = `${item.name} · veličina ${item.size} <span class="lb-price">${item.price}€</span>`;
+    lbCounter.textContent = `${lbIndex + 1} / ${lightboxImages.length}`;
+  }
+
+  function openLightbox(i) {
+    if (!lightboxImages.length) return;
+    showLightboxImage(i);
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  document.getElementById('lb-prev').addEventListener('click', () => showLightboxImage(lbIndex - 1));
+  document.getElementById('lb-next').addEventListener('click', () => showLightboxImage(lbIndex + 1));
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showLightboxImage(lbIndex - 1);
+    if (e.key === 'ArrowRight') showLightboxImage(lbIndex + 1);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+  }, {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
