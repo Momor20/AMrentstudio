@@ -270,6 +270,16 @@
   .size-filters button.active{
     background:var(--gold);color:#fff;
   }
+  .size-filters a{
+    border:1.5px solid var(--gold);
+    background:transparent;color:var(--gold-deep);
+    padding:8px 18px;border-radius:100px;
+    font-family:'Jost',sans-serif;font-size:0.82rem;letter-spacing:0.02em;
+    cursor:pointer;text-decoration:none;display:inline-block;
+  }
+  .size-filters a:hover{
+    background:var(--gold);color:#fff;
+  }
   .btn-cta-big{
     display:inline-block;
     background:linear-gradient(135deg, var(--gold), var(--gold-deep));
@@ -515,7 +525,13 @@
       <h2>Cijela ponuda</h2>
       <p>Filtrirajte haljine po veličini</p>
     </div>
-    <div id="size-filters" class="size-filters reveal"></div>
+    <div id="size-filters" class="size-filters reveal">
+      <a href="haljine-xs.html">Veličina XS</a>
+      <a href="haljine-s.html">Veličina S</a>
+      <a href="haljine-m.html">Veličina M</a>
+      <a href="haljine-l.html">Veličina L</a>
+      <a href="haljine-xl.html">Veličina XL</a>
+    </div>
     <div id="size-groups" class="reveal"></div>
     <p class="no-results" id="no-dresses" style="display:none;text-align:center;color:var(--ink-soft);font-size:0.9rem;padding:30px 0;">Kolekcija se ažurira — uskoro nove haljine.</p>
     <div class="collection-cta reveal">
@@ -648,7 +664,7 @@
         { name: "Crna, sa mašnom", price: 50, alt: "Crna duga haljina večera Podgorica", imgs: ["Images/XS/crna-duga-haljina-vecera-podgorica-1.jpg"] },
         { name: "Zelena, na rame", price: 50, imgs: ["Images/XS/zelena-na-rame-1.jpg"] },
         { name: "Braon, MR", price: 70, alt: "Braon lux haljina MR", imgs: ["Images/XS/braon-lux-haljina-mr-1.jpg", "Images/XS/braon-lux-haljina-mr-2.jpg"] },
-        { name: "Ohh Po, crna duga sa šljokicama", price: 70, alt: "Ohh Po crna duga haljina sa šljokicama", imgs: ["Images/XS/ohh-po-crna-duga-sa-sljokicama-1.jpg"] },
+        { name: "Ohh Po", price: 70, alt: "Ohh Po crna duga haljina sa šljokicama", imgs: ["Images/XS/ohh-po-crna-duga-sa-sljokicama-1.jpg"] },
         { name: "Žuta, duga", price: 60, imgs: ["Images/XS/zuta-duga-1.jpg", "Images/XS/zuta-duga-2.jpg"] },
         { name: "Trula, višnja", price: 60, imgs: ["Images/XS/kratka-visnja-1.jpg"] }
       ]
@@ -667,19 +683,18 @@
         { name: "Plava, kratka", price: 60, alt: "Plava satenska haljina S Podgorica", imgs: ["Images/S/plava-satenska-haljina-s-podgorica-1.png"] },
         { name: "Crvena, T", price: 60, imgs: ["Images/S/crvena-t-1.jpg"] },
         { name: "Braon, MR", price: 70, alt: "Braon lux haljina MR", imgs: ["Images/S/braon-lux-haljina-mr-1.jpg", "Images/S/braon-lux-haljina-mr-2.jpg"] },
-        { name: "Crna, sa šljokicama", price: 50, imgs: ["Images/M/crna-sljoka-1.jpg"] },
-        { name: "Maslinasta", price: 60, imgs: ["Images/S/maslinasta-1.jpg"] },
-        { name: "Roza, til", price: 50, imgs: ["Images/S/roza-till-1.jpg"] },
+        { name: "Maslinasta", price: 60, alt: "Maslinasta večernja haljina", imgs: ["Images/S/maslinasta-1.jpg"] },
+        { name: "Roza till", price: 50, alt: "Roza til haljina Crna Gora", imgs: ["Images/S/roza-till-1.jpg"] },
         { name: "Roza, sa šljokicama", price: 60, imgs: ["Images/S/roza-sljokice-1.jpg"] },
         { name: "Mint, duga", price: 50, imgs: ["Images/S/mint-duga-1.jpg"] },
-        { name: "Crna, sa šljokicama", price: 50, imgs: ["Images/S/crna-sljoka-1.jpg"] },
+        { name: "Crna sa sljokicama", price: 50, alt: "Crna haljina za korporativni događaj šljokasta", imgs: ["Images/S/crna-sljoka-1.jpg"] },
         { name: "Roza, baby", price: 50, alt: "Roza haljina lux Podgorica CG", imgs: ["Images/S/roza-haljina-lux-podgorica-cg-1.jpg"] },
         { name: "Zelena, MR", price: 60, alt: "Zelena duga haljina matura CG", imgs: ["Images/S/zelena-duga-haljina-matura-cg-1.jpg"] },
         { name: "Crna, pernata", price: 70, imgs: ["Images/M/crna-pernata-1.jpg"] },
         { name: "Žuta, limun", price: 70, alt: "Žuta limun haljina", imgs: ["Images/S/zuta-limun-dress-1.jpg"] },
         { name: "Žuta, duga", price: 50, imgs: ["Images/S/zuta-duga-s-1.jpg"] },
         { name: "Žuta", price: 50, imgs: ["Images/S/zutaa-1.jpg"] },
-        { name: "Ohh Po, crna duga sa šljokicama", price: 70, alt: "Ohh Po crna duga haljina sa šljokicama", imgs: ["Images/S/ohh-po-crna-duga-sa-sljokicama-1.jpg"] },
+        { name: "Ohh Po", price: 70, alt: "Ohh Po crna duga haljina sa šljokicama", imgs: ["Images/S/ohh-po-crna-duga-sa-sljokicama-1.jpg"] },
         { name: "Bordo, duga", price: 60, imgs: ["Images/S/bordo-duga-1.jpg"] },
        
         { name: "Braon, kratka 2", price: 60, imgs: ["Images/S/braon-kratka2-1.jpg"] },
@@ -693,40 +708,40 @@
         { name: "Braon, AS", price: 50, imgs: ["Images/M/braon-as-1.jpg", "Images/M/braon-as-2.jpg"] },
         { name: "Braon, MR", price: 70, alt: "Braon lux haljina MR", imgs: ["Images/M/braon-lux-haljina-mr-1.jpg", "Images/M/braon-lux-haljina-mr-2.jpg"] },
         { name: "Crvena, ruža 1", price: 70, imgs: ["Images/M/crvena-ruza1-1.jpg"] },
-        { name: "Crvena, GJ", price: 70, imgs: ["Images/M/crvena-gj-1.jpg", "Images/M/crvena-gj-2.jpg"] },
-        { name: "Crna, sa perjem", price: 70, imgs: ["Images/M/crna-perje-1.jpg"] },
+        { name: "Crvena, GJ", price: 70, alt: "Crvena GJ butik za iznajmljivanje haljina", imgs: ["Images/M/crvena-gj-1.jpg", "Images/M/crvena-gj-2.jpg"] },
+        { name: "Crna sa perjem", price: 70, alt: "Crna haljina sa perjem otvorena", imgs: ["Images/M/crna-perje-1.jpg"] },
         { name: "Crna, pernata", price: 70, imgs: ["Images/M/crna-pernata-1.jpg"] },
-        { name: "Crna, otvorena", price: 50, imgs: ["Images/M/crna-otvorena-1.jpg", "Images/M/crna-otvorena-2.jpg"] },
+        { name: "Crna otvorena", price: 50, alt: "Crna haljina na jedno rame", imgs: ["Images/M/crna-otvorena-1.jpg", "Images/M/crna-otvorena-2.jpg"] },
         { name: "Crna, ruža", price: 60, imgs: ["Images/M/crna-ruza-1.jpg"] },
-        { name: "Crna, sa šljokicama", price: 50, imgs: ["Images/M/crna-sljoka-1.jpg"] },
+        { name: "Crna sa sljokicama", price: 50, alt: "Crna haljina za korporativni događaj šljokasta", imgs: ["Images/M/crna-sljoka-1.jpg"] },
         { name: "Kratka, crvena 1", price: 60, imgs: ["Images/M/kratka-crvena1-1.jpg", "Images/M/kratka-crvena1-2.jpg"] },
         { name: "Crna, kratka", price: 60, imgs: ["Images/M/crna-kratka-1.jpg", "Images/M/crna-kratka-2.jpg"] },
         { name: "Baby Boo", price: 70, imgs: ["Images/M/baby-boo-1.jpg", "Images/M/baby-boo-2.jpg"] },
-        { name: "Maslinasta", price: 60, imgs: ["Images/M/maslinasta-1.jpg"] },
+        { name: "Maslinasta", price: 60, alt: "Maslinasta večernja haljina", imgs: ["Images/M/maslinasta-1.jpg"] },
         { name: "Zelena, na rame", price: 60, imgs: ["Images/M/zelena-rame-1.jpg"] },
-        { name: "Zelena, duga", price: 50, imgs: ["Images/M/zelena-duga-1.jpg", "Images/M/zelena-duga-2.jpg"] },
-        { name: "Ljubičasta, kratka", price: 60, imgs: ["Images/M/ljubicasta-kratka-1.jpg"] },
+        { name: "Zelena, duga", price: 50, alt: "Zelena duga haljina za krstenje Podgorica", imgs: ["Images/M/zelena-duga-1.jpg", "Images/M/zelena-duga-2.jpg"] },
+        { name: "Ljubičasta, kratka", price: 60, alt: "Iznajmljivanje haljina Podgorica ljubičasta kratka", imgs: ["Images/M/ljubicasta-kratka-1.jpg"] },
         { name: "Ruža", price: 70, imgs: ["Images/M/ruza-1.jpg", "Images/M/ruza-2.jpg"] },
         { name: "Kristal", price: 60, imgs: ["Images/M/kristal-1.jpg"] },
         { name: "Plava, kratka", price: 60, alt: "Plava satenska haljina M Podgorica", imgs: ["Images/M/plava-satenska-haljina-m-podgorica-1.png"] },
         { name: "Plava, leprsasta", price: 60, imgs: ["Images/M/plava-leprsasta-1.jpg", "Images/M/plava-leprsasta-2.jpg"] },
-        { name: "Narandžasta, cvijet", price: 60, imgs: ["Images/M/narandzasta-cvijet-1.jpg", "Images/M/narandzasta-cvijet-2.jpg"] },
+        { name: "Narandžasta, cvijet", price: 60, alt: "Narandžasta cvijet haljine za iznajmljivanje Crna Gora", imgs: ["Images/M/narandzasta-cvijet-1.jpg", "Images/M/narandzasta-cvijet-2.jpg"] },
         { name: "Roza, kratka sa šljokicama", price: 60, alt: "Roza haljina sa šljokicama", imgs: ["Images/M/roza-haljina-sa-sljokicama-1.jpg"] },
-        { name: "Roza, til", price: 50, imgs: ["Images/M/roza-till-1.jpg"] },
-        { name: "Roza, leprsava", price: 50, imgs: ["Images/M/roza-leprsava-1.jpg", "Images/M/roza-leprsava-2.jpg"] },
+        { name: "Roza till", price: 50, alt: "Roza til haljina Crna Gora", imgs: ["Images/M/roza-till-1.jpg"] },
+        { name: "Roza, leprsava", price: 50, alt: "Roza leprsava haljina gdje iznajmiti haljinu Podgorica", imgs: ["Images/M/roza-leprsava-1.jpg", "Images/M/roza-leprsava-2.jpg"] },
         { name: "Ljubičasta, ZG", price: 70, imgs: ["Images/M/ljubicasta-zg-1.jpg"] },
         { name: "Crvena, sexi", price: 50, imgs: ["Images/M/crvena-sexi-1.jpg", "Images/M/crvena-sexi-2.jpg"] },
         { name: "Crvena, T", price: 60, imgs: ["Images/M/crvena-t-1.jpg"] },
         { name: "Ljubičasta, BB", price: 50, imgs: ["Images/M/ljubicasta-bb-1.jpg"] },
-        { name: "Braon, kratka", price: 60, imgs: ["Images/M/braon-kratka-1.jpg"] },
-        { name: "Braon, kratka", price: 60, imgs: ["Images/L/braon-kratka-1.jpg"] },
+        { name: "Braon, kratka", price: 60, alt: "Braon kratka haljina za svadbu gost iznajmljivanje", imgs: ["Images/M/braon-kratka-1.jpg"] },
+        { name: "Braon, kratka", price: 60, alt: "Braon kratka haljina za svadbu gost iznajmljivanje", imgs: ["Images/L/braon-kratka-1.jpg"] },
         { name: "Crvena, sa rukavima", price: 60, imgs: ["Images/M/crvena-sa-rukavima-1.jpg"] },
         { name: "Crna, plast", price: 60, imgs: ["Images/M/crna-plast-1.jpg"] },
         { name: "Trula, višnja", price: 60, imgs: ["Images/M/kratka-visnja-1.jpg"] },
         { name: "Mint", price: 60, imgs: ["Images/M/mint-1.jpg"] },
         { name: "Žuta, kratka ASB", price: 70, imgs: ["Images/M/zuta-kratka-asb-1.jpg", "Images/M/zuta-kratka-asb-2.jpg"] },
         { name: "Žuta, duga", price: 60, imgs: ["Images/M/zuta-duga-m-1.jpg"] },
-        { name: "Ohh Po, crna duga sa šljokicama", price: 70, alt: "Ohh Po crna duga haljina sa šljokicama", imgs: ["Images/M/ohh-po-crna-duga-sa-sljokicama-1.jpg"] },
+        { name: "Ohh Po", price: 70, alt: "Ohh Po crna duga haljina sa šljokicama", imgs: ["Images/M/ohh-po-crna-duga-sa-sljokicama-1.jpg"] },
       ]
     },
     {
@@ -739,18 +754,18 @@
         { name: "Ruža", price: 70, imgs: ["Images/L/ruza-1.jpg", "Images/L/ruza-2.jpg"] },
         { name: "Kristal", price: 60, imgs: ["Images/L/kristal-1.jpg"] },
         { name: "Plava, leprsava", price: 60, imgs: ["Images/L/plava-leprsasta-1.jpg", "Images/L/plava-leprsasta-2.jpg"] },
-        { name: "Roza, leprsava", price: 50, imgs: ["Images/L/roza-leprsava-1.jpg", "Images/L/roza-leprsava-2.jpg"] },
+        { name: "Roza, leprsava", price: 50, alt: "Roza leprsava haljina gdje iznajmiti haljinu Podgorica", imgs: ["Images/L/roza-leprsava-1.jpg", "Images/L/roza-leprsava-2.jpg"] },
         { name: "Crna, kratka", price: 60, imgs: ["Images/L/crna-kratka-1.jpg", "Images/L/crna-kratka-2.jpg"] },
-        { name: "Crvena, GJ", price: 70, imgs: ["Images/L/crvena-gj-1.jpg", "Images/L/crvena-gj-2.jpg"] },
+        { name: "Crvena, GJ", price: 70, alt: "Crvena GJ butik za iznajmljivanje haljina", imgs: ["Images/L/crvena-gj-1.jpg", "Images/L/crvena-gj-2.jpg"] },
         { name: "Zelena, na rame", price: 60, imgs: ["Images/M/zelena-rame-1.jpg"] },
-        { name: "Ljubičasta, kratka", price: 60, imgs: ["Images/L/ljubicasta-kratka-1.jpg"] },
-        { name: "Narandžasta, cvijet", price: 60, imgs: ["Images/L/narandzasta-cvijet-1.jpg", "Images/L/narandzasta-cvijet-2.jpg"] },
+        { name: "Ljubičasta, kratka", price: 60, alt: "Iznajmljivanje haljina Podgorica ljubičasta kratka", imgs: ["Images/L/ljubicasta-kratka-1.jpg"] },
+        { name: "Narandžasta, cvijet", price: 60, alt: "Narandžasta cvijet haljine za iznajmljivanje Crna Gora", imgs: ["Images/L/narandzasta-cvijet-1.jpg", "Images/L/narandzasta-cvijet-2.jpg"] },
         { name: "Ljubičasta, ZG", price: 70, imgs: ["Images/L/ljubicasta-zg-l-1.jpg"] },
         { name: "Ljubičasta, razbarena", price: 50, imgs: ["Images/L/ljubicasta-razbarena-1.jpg"] },
         { name: "Braon, kratka 1", price: 60, imgs: ["Images/L/braon-kratka1-1.jpg"] },
         { name: "Braon, kratka", price: 60, imgs: ["Images/L/braon-kratka-1.jpg"] },
         { name: "Crna, plast", price: 60, imgs: ["Images/L/crna-plast-1.jpg"] },
-        { name: "Zelena, duga", price: 50, imgs: ["Images/L/zelena-duga-1.jpg", "Images/L/zelena-duga-2.jpg"] },
+        { name: "Zelena, duga", price: 50, alt: "Zelena duga haljina za krstenje Podgorica", imgs: ["Images/L/zelena-duga-1.jpg", "Images/L/zelena-duga-2.jpg"] },
       ]
     },
     {
@@ -842,37 +857,14 @@
     noResults.style.display = 'block';
   }
 
-  const sizesPresent = [...new Set(sizeGroups.map(g => g.size))];
-  let activeFilter = 'Sve';
-
   function renderFullGrid() {
     container.innerHTML = '';
     const grid = document.createElement('div');
     grid.className = 'dress-grid';
-    const dressesToShow = activeFilter === 'Sve'
-      ? allDresses
-      : allDresses.filter(d => d.size === activeFilter);
-    dressesToShow.forEach(d => grid.appendChild(createDressCard(d)));
+    allDresses.forEach(d => grid.appendChild(createDressCard(d)));
     container.appendChild(grid);
   }
 
-  function renderFilters() {
-    filtersEl.innerHTML = '';
-    ['Sve', ...sizesPresent].forEach(size => {
-      const btn = document.createElement('button');
-      btn.textContent = size === 'Sve' ? 'Sve' : `Veličina ${size}`;
-      if (size === activeFilter) btn.classList.add('active');
-      btn.addEventListener('click', () => {
-        activeFilter = size;
-        filtersEl.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        renderFullGrid();
-      });
-      filtersEl.appendChild(btn);
-    });
-  }
-
-  renderFilters();
   renderFullGrid();
 
   // Reveal "Cijela ponuda" only when the button is clicked
