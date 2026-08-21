@@ -385,6 +385,8 @@
     </div>
   </nav>
 
+<div class="wrap">
+
 <nav class="breadcrumb"><a href="index.html">Početna</a> / Haljine, veličina S</nav>
 
 <section class="size-hero reveal">
@@ -415,6 +417,8 @@
     <div class="lightbox-counter" id="lb-counter"></div>
   </div>
   <button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Sljedeća slika">›</button>
+</div>
+
 </div>
 
 <footer style="text-align:center;padding:30px 20px;color:var(--ink-soft);font-size:0.8rem;border-top:1px solid var(--line);">
@@ -557,10 +561,7 @@
     if (e.key === 'ArrowRight') showLightboxImage(lbIndex + 1);
   });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
-  }, {threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 </script>
 
 </body>
