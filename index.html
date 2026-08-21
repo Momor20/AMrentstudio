@@ -1,104 +1,13 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-<meta name="google-site-verification" content="upb4uo-bvdCgt2u-yF7oIuayCAg8z1uonbzCSxp8sIY" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AM Rent Studio | Iznajmljivanje svečanih haljina Podgorica</title>
 <meta name="description" content="AM Rent Studio – butik za iznajmljivanje svečanih haljina u centru Podgorice. Vjenčanja, mature, gala večeri. Hemijsko čišćenje uključeno.">
-
-<!-- Canonical tag - sprečava dupli sadržaj (www vs non-www, http vs https) -->
-<link rel="canonical" href="https://amrentstudio.com/" />
-
-<!-- Favicon - koristi pravi logo iz Images foldera -->
-<link rel="icon" type="image/png" href="Images/LOGO%20AM%20RENT.png" />
-<link rel="apple-touch-icon" href="Images/LOGO%20AM%20RENT.png" />
-
-<!-- Open Graph meta tagovi - za lijep prikaz kad se link dijeli na Instagram/Viber/WhatsApp/Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="AM Rent Studio | Iznajmljivanje svečanih haljina Podgorica" />
-<meta property="og:description" content="Butik za iznajmljivanje svečanih haljina u centru Podgorice. Vjenčanja, mature, gala večeri. Hemijsko čišćenje uključeno u cijenu." />
-<meta property="og:image" content="https://amrentstudio.com/Images/LOGO%20AM%20RENT.png" />
-<meta property="og:url" content="https://amrentstudio.com/" />
-<meta property="og:locale" content="sr_RS" />
-<meta property="og:site_name" content="AM Rent Studio" />
-
-<!-- Twitter Card meta tagovi -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="AM Rent Studio | Iznajmljivanje svečanih haljina Podgorica" />
-<meta name="twitter:description" content="Butik za iznajmljivanje svečanih haljina u centru Podgorice. Vjenčanja, mature, gala večeri. Hemijsko čišćenje uključeno u cijenu." />
-<meta name="twitter:image" content="https://amrentstudio.com/Images/LOGO%20AM%20RENT.png" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- LocalBusiness / ClothingStore schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ClothingStore",
-  "name": "AM Rent Studio",
-  "image": "https://amrentstudio.com/Images/LOGO%20AM%20RENT.png",
-  "description": "Butik za iznajmljivanje svečanih haljina u centru Podgorice. Vjenčanja, mature, gala večeri. Hemijsko čišćenje uključeno u cijenu.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Kralja Nikole 128",
-    "addressLocality": "Podgorica",
-    "addressCountry": "ME"
-  },
-  "telephone": "+38267853433",
-  "email": "amrentstudio@gmail.com",
-  "url": "https://amrentstudio.com/",
-  "sameAs": [
-    "https://www.instagram.com/am_rentstudio/"
-  ],
-  "priceRange": "$$"
-}
-</script>
-
-<!-- FAQPage schema - za rich snippet u Google pretrazi -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Da li se plaća hemijsko čišćenje?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ne. Hemijsko čišćenje i peglanje su uključeni u cijenu iznajmljivanja. Svaka haljina je spremna za nošenje."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Koliko unaprijed treba rezervisati termin?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Preporučujemo 2 do 4 nedjelje prije događaja, posebno za mature i vjenčanja."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Što ako se haljina ošteti?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Manja oštećenja i fleke rješava naš standardni servis. Veća oštećenja se procjenjuju posebno."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Nudite li dostavu van Podgorice?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Da, usluge su dostupne širom Crne Gore uz dogovor oko dostave."
-      }
-    }
-  ]
-}
-</script>
-
 <style>
   :root{
     --bg:#F3EBE0;
@@ -268,6 +177,16 @@
     cursor:pointer;
   }
   .size-filters button.active{
+    background:var(--gold);color:#fff;
+  }
+  .size-filters a{
+    border:1.5px solid var(--gold);
+    background:transparent;color:var(--gold-deep);
+    padding:8px 18px;border-radius:100px;
+    font-family:'Jost',sans-serif;font-size:0.82rem;letter-spacing:0.02em;
+    cursor:pointer;text-decoration:none;display:inline-block;
+  }
+  .size-filters a:hover{
     background:var(--gold);color:#fff;
   }
   .btn-cta-big{
@@ -463,8 +382,8 @@
 
   <section class="hero" id="top">
     <div class="eyebrow">Podgorica · Kralja Nikole 128</div>
-    <h1>Butik za iznajmljivanje svečanih haljina u centru Podgorice</h1>
-    <p>Zablistajte bez potrebe za kupovinom. Vjenčanja, mature i gala večeri — hemijsko čišćenje uključeno u cijenu.</p>
+    <h1>Zablistajte <em>bez</em> potrebe za kupovinom</h1>
+    <p>Butik za iznajmljivanje svečanih haljina u centru Podgorice. Vjenčanja, mature i gala večeri — hemijsko čišćenje uključeno u cijenu.</p>
     <div class="btn-row">
       <a href="#kolekcija" class="btn-primary">Pogledajte kolekciju</a>
     </div>
@@ -515,7 +434,13 @@
       <h2>Cijela ponuda</h2>
       <p>Filtrirajte haljine po veličini</p>
     </div>
-    <div id="size-filters" class="size-filters reveal"></div>
+    <div id="size-filters" class="size-filters reveal">
+      <a href="haljine-xs.html">Veličina XS</a>
+      <a href="haljine-s.html">Veličina S</a>
+      <a href="haljine-m.html">Veličina M</a>
+      <a href="haljine-l.html">Veličina L</a>
+      <a href="haljine-xl.html">Veličina XL</a>
+    </div>
     <div id="size-groups" class="reveal"></div>
     <p class="no-results" id="no-dresses" style="display:none;text-align:center;color:var(--ink-soft);font-size:0.9rem;padding:30px 0;">Kolekcija se ažurira — uskoro nove haljine.</p>
     <div class="collection-cta reveal">
@@ -692,15 +617,15 @@
       dresses: [
         { name: "Braon, AS", price: 50, imgs: ["Images/M/braon-as-1.jpg", "Images/M/braon-as-2.jpg"] },
         { name: "Braon, MR", price: 70, alt: "Braon lux haljina MR", imgs: ["Images/M/braon-lux-haljina-mr-1.jpg", "Images/M/braon-lux-haljina-mr-2.jpg"] },
-        { name: "Crvena, ruža 1", price: 70, alt: "Svečana novogodišnja haljina", imgs: ["Images/M/crvena-ruza1-1.jpg"] },
-        { name: "Crvena, GJ", price: 70, alt: "crvena-maturska-haljina", imgs: ["Images/M/crvena-gj-1.jpg", "Images/M/crvena-gj-2.jpg"] },
+        { name: "Crvena, ruža 1", price: 70, imgs: ["Images/M/crvena-ruza1-1.jpg"] },
+        { name: "Crvena, GJ", price: 70, alt: "Crvena GJ butik za iznajmljivanje haljina", imgs: ["Images/M/crvena-gj-1.jpg", "Images/M/crvena-gj-2.jpg"] },
         { name: "Crna sa perjem", price: 70, alt: "Crna haljina sa perjem otvorena", imgs: ["Images/M/crna-perje-1.jpg"] },
-        { name: "Crna, pernata", price: 70, alt: "crna-pernata-otvorenih-ledja", imgs: ["Images/M/crna-pernata-1.jpg"] },
+        { name: "Crna, pernata", price: 70, imgs: ["Images/M/crna-pernata-1.jpg"] },
         { name: "Crna otvorena", price: 50, alt: "Crna haljina na jedno rame", imgs: ["Images/M/crna-otvorena-1.jpg", "Images/M/crna-otvorena-2.jpg"] },
         { name: "Crna, ruža", price: 60, imgs: ["Images/M/crna-ruza-1.jpg"] },
         { name: "Crna sa sljokicama", price: 50, alt: "Crna haljina za korporativni događaj šljokasta", imgs: ["Images/M/crna-sljoka-1.jpg"] },
         { name: "Kratka, crvena 1", price: 60, imgs: ["Images/M/kratka-crvena1-1.jpg", "Images/M/kratka-crvena1-2.jpg"] },
-        { name: "Crna, kratka", price: 60, alt: "ljetnja kratka crna", imgs: ["Images/M/crna-kratka-1.jpg", "Images/M/crna-kratka-2.jpg"] },
+        { name: "Crna, kratka", price: 60, imgs: ["Images/M/crna-kratka-1.jpg", "Images/M/crna-kratka-2.jpg"] },
         { name: "Baby Boo", price: 70, imgs: ["Images/M/baby-boo-1.jpg", "Images/M/baby-boo-2.jpg"] },
         { name: "Maslinasta", price: 60, alt: "Maslinasta večernja haljina", imgs: ["Images/M/maslinasta-1.jpg"] },
         { name: "Zelena, na rame", price: 60, imgs: ["Images/M/zelena-rame-1.jpg"] },
@@ -740,7 +665,7 @@
         { name: "Kristal", price: 60, imgs: ["Images/L/kristal-1.jpg"] },
         { name: "Plava, leprsava", price: 60, imgs: ["Images/L/plava-leprsasta-1.jpg", "Images/L/plava-leprsasta-2.jpg"] },
         { name: "Roza, leprsava", price: 50, alt: "Roza leprsava haljina gdje iznajmiti haljinu Podgorica", imgs: ["Images/L/roza-leprsava-1.jpg", "Images/L/roza-leprsava-2.jpg"] },
-        { name: "Crna, kratka", price: 60, alt: "ljetnja kratka crna", imgs: ["Images/L/crna-kratka-1.jpg", "Images/L/crna-kratka-2.jpg"] },
+        { name: "Crna, kratka", price: 60, imgs: ["Images/L/crna-kratka-1.jpg", "Images/L/crna-kratka-2.jpg"] },
         { name: "Crvena, GJ", price: 70, alt: "Crvena GJ butik za iznajmljivanje haljina", imgs: ["Images/L/crvena-gj-1.jpg", "Images/L/crvena-gj-2.jpg"] },
         { name: "Zelena, na rame", price: 60, imgs: ["Images/M/zelena-rame-1.jpg"] },
         { name: "Ljubičasta, kratka", price: 60, alt: "Iznajmljivanje haljina Podgorica ljubičasta kratka", imgs: ["Images/L/ljubicasta-kratka-1.jpg"] },
@@ -842,37 +767,14 @@
     noResults.style.display = 'block';
   }
 
-  const sizesPresent = [...new Set(sizeGroups.map(g => g.size))];
-  let activeFilter = 'Sve';
-
   function renderFullGrid() {
     container.innerHTML = '';
     const grid = document.createElement('div');
     grid.className = 'dress-grid';
-    const dressesToShow = activeFilter === 'Sve'
-      ? allDresses
-      : allDresses.filter(d => d.size === activeFilter);
-    dressesToShow.forEach(d => grid.appendChild(createDressCard(d)));
+    allDresses.forEach(d => grid.appendChild(createDressCard(d)));
     container.appendChild(grid);
   }
 
-  function renderFilters() {
-    filtersEl.innerHTML = '';
-    ['Sve', ...sizesPresent].forEach(size => {
-      const btn = document.createElement('button');
-      btn.textContent = size === 'Sve' ? 'Sve' : `Veličina ${size}`;
-      if (size === activeFilter) btn.classList.add('active');
-      btn.addEventListener('click', () => {
-        activeFilter = size;
-        filtersEl.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        renderFullGrid();
-      });
-      filtersEl.appendChild(btn);
-    });
-  }
-
-  renderFilters();
   renderFullGrid();
 
   // Reveal "Cijela ponuda" only when the button is clicked
