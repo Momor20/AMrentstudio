@@ -566,7 +566,6 @@
         { name: "Crna, Marta haljina", price: 70, alt: "Crna večernja haljina XS", imgs: ["Images/XS/crna-vecernja-haljina-xs-1.jpg", "Images/XS/crna-vecernja-haljina-xs-2.jpg", "Images/XS/crna-vecernja-haljina-xs-3.jpg"] },
         { name: "Tamno zelena", price: 70, alt: "Tamno zelena haljina podgorica renta", imgs: ["Images/S/tamno-zelena-haljina-podgoric-renta-1.jpg", "Images/S/tamno-zelena-haljina-podgoric-renta-2.jpg"] },
         { name: "Crvena, MIK ruža", price: 70, alt: "Crvena maturska haljina CG", imgs: ["Images/XS/crvena-maturska-haljina-cg-1.jpg", "Images/XS/crvena-maturska-haljina-cg-2.jpg"] },
-        { name: "Crna, sa mašnom", price: 50, alt: "Crna duga haljina večera Podgorica", imgs: ["Images/S/crna-duga-haljina-vecera-podgorica-1.jpg"] },
         { name: "Crvena, kratka", price: 60, alt: "Crvena kratka lux CG", imgs: ["Images/XS/crvena-kratka-lux-cg-1.jpg", "Images/XS/crvena-kratka-lux-cg-2.jpg"] },
         { name: "Plava, kratka", price: 60, alt: "Plava satenska haljina XS Podgorica", imgs: ["Images/XS/plava-satenska-haljina-xs-podgorica-1.png"] },
         { name: "Roza, baby", price: 50, alt: "Roza haljina lux Podgorica CG", imgs: ["Images/XS/roza-haljina-lux-podgorica-cg-1.jpg"] },
@@ -603,7 +602,7 @@
         { name: "Crna sa sljokicama", price: 50, alt: "Crna haljina za korporativni događaj šljokasta", imgs: ["Images/S/crna-sljoka-1.jpg"] },
         { name: "Roza, baby", price: 50, alt: "Roza haljina lux Podgorica CG", imgs: ["Images/S/roza-haljina-lux-podgorica-cg-1.jpg"] },
         { name: "Zelena, MR", price: 60, alt: "Zelena duga haljina matura CG", imgs: ["Images/S/zelena-duga-haljina-matura-cg-1.jpg"] },
-        { name: "Crna, pernata", price: 70, imgs: ["Images/M/crna-pernata-1.jpg"] },
+        { name: "Crna, pernata", price: 70, imgs: ["Images/S/crna-pernata-1.jpg"] },
         { name: "Žuta, limun", price: 70, alt: "Žuta limun haljina", imgs: ["Images/S/zuta-limun-dress-1.jpg"] },
         { name: "Žuta, duga", price: 50, imgs: ["Images/S/zuta-duga-s-1.jpg"] },
         { name: "Žuta", price: 50, imgs: ["Images/S/zutaa-1.jpg"] },
@@ -650,7 +649,6 @@
         { name: "Crvena, T", price: 60, imgs: ["Images/M/crvena-t-1.jpg"] },
         { name: "Ljubičasta, BB", price: 50, imgs: ["Images/M/ljubicasta-bb-1.jpg"] },
         { name: "Braon, kratka", price: 60, alt: "Braon kratka haljina za svadbu gost iznajmljivanje", imgs: ["Images/M/braon-kratka-1.jpg"] },
-        { name: "Braon, kratka", price: 60, alt: "Braon kratka haljina za svadbu gost iznajmljivanje", imgs: ["Images/L/braon-kratka-1.jpg"] },
         { name: "Crvena, sa rukavima", price: 60, imgs: ["Images/M/crvena-sa-rukavima-1.jpg"] },
         { name: "Crna, plast", price: 60, imgs: ["Images/M/crna-plast-1.jpg"] },
         { name: "Trula, višnja", price: 60, imgs: ["Images/M/kratka-visnja-1.jpg"] },
@@ -673,7 +671,7 @@
         { name: "Roza, leprsava", price: 50, alt: "Roza leprsava haljina gdje iznajmiti haljinu Podgorica", imgs: ["Images/L/roza-leprsava-1.jpg", "Images/L/roza-leprsava-2.jpg"] },
         { name: "Crna, kratka", price: 60, imgs: ["Images/L/crna-kratka-1.jpg", "Images/L/crna-kratka-2.jpg"] },
         { name: "Crvena, GJ", price: 70, alt: "Crvena GJ butik za iznajmljivanje haljina", imgs: ["Images/L/crvena-gj-1.jpg", "Images/L/crvena-gj-2.jpg"] },
-        { name: "Zelena, na rame", price: 60, imgs: ["Images/M/zelena-rame-1.jpg"] },
+        { name: "Zelena, na rame", price: 60, imgs: ["Images/L/zelena-rame-1.jpg"] },
         { name: "Ljubičasta, kratka", price: 60, alt: "Iznajmljivanje haljina Podgorica ljubičasta kratka", imgs: ["Images/L/ljubicasta-kratka-1.jpg"] },
         { name: "Narandžasta, cvijet", price: 60, alt: "Narandžasta cvijet haljine za iznajmljivanje Crna Gora", imgs: ["Images/L/narandzasta-cvijet-1.jpg", "Images/L/narandzasta-cvijet-2.jpg"] },
         { name: "Ljubičasta, ZG", price: 70, imgs: ["Images/L/ljubicasta-zg-l-1.jpg"] },
@@ -699,8 +697,31 @@
     },
   ];
 
+  // Keep dress names consistent across sizes so the homepage preview and filters
+  // don't miss products because of minor label differences.
+  const normalizeDressName = (name = '') =>
+    String(name)
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim();
+
+  const nameAliases = {
+    'crna perjem': 'crna sa perjem',
+  };
+
+  const normalizedSizeGroups = sizeGroups.map(group => ({
+    ...group,
+    dresses: group.dresses.map(d => {
+      const normalizedName = normalizeDressName(d.name);
+      const aliasName = nameAliases[normalizedName] || d.name;
+      return { ...d, name: aliasName };
+    }),
+  }));
+
   // Flatten all dresses with their size attached
-  const allDresses = sizeGroups.flatMap(group =>
+  const allDresses = normalizedSizeGroups.flatMap(group =>
     group.dresses.map(d => ({ ...d, size: group.size }))
   );
 
@@ -759,7 +780,10 @@
   const previewGrid = document.getElementById('preview-grid');
   const previewNames = ['Braon, ASB', 'Žuta, sa šalom', 'Crna Šljokasta', 'Crvena, MIK ruža'];
   const previewDresses = previewNames
-    .map(name => allDresses.find(d => d.name === name))
+    .map(name => {
+      const target = normalizeDressName(name);
+      return allDresses.find(d => normalizeDressName(d.name) === target);
+    })
     .filter(Boolean);
   (previewDresses.length ? previewDresses : allDresses.slice(0, 4))
     .forEach(d => previewGrid.appendChild(createDressCard(d)));
